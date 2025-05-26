@@ -1,16 +1,134 @@
-/**
- * Copyright 2025 oh826
- * 
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *     https://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/* ========== COLOR VARIABLES ========== */
+:root {
+    /* Amazon's Official Colors */
+    --amazon-orange: #FF9900;
+    --amazon-dark: #000000;
+    --amazon-blue: #146EB4; /* Secondary color */
+    
+    /* Health Greens */
+    --health-green: #30a46c;
+    --health-green-dark: #2d835b;
+    --health-green-light: #e8f5e9;
+  }
+  
+  /* ========== BASE STYLES ========== */
+  body {
+    font-family: 'Amazon Ember', Arial, sans-serif; /* Amazon's official font */
+    line-height: 1.6;
+    color: var(--amazon-dark);
+  }
+  
+  /* ========== NAVBAR ========== */
+  .navbar {
+    background: var(--amazon-dark) !important;
+    border-bottom: 3px solid var(--amazon-orange);
+  }
+  
+  .navbar-brand img {
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-brand:hover img {
+    transform: scale(1.1);
+  }
+  
+  .nav-link {
+    color: white !important;
+    position: relative;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--amazon-orange) !important;
+  }
+  
+  /* Active state indicator */
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--health-green);
+  }
+  
+  /* ========== BUTTONS ========== */
+  .btn-amazon {
+    background: var(--amazon-orange);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-amazon:hover {
+    background: #e88a04;
+    transform: translateY(-2px);
+  }
+  
+  .btn-health {
+    background: var(--health-green);
+    color: white;
+    border: 2px solid var(--health-green-dark);
+  }
+  
+  .btn-health:hover {
+    background: var(--health-green-dark);
+  }
+  
+  /* ========== HEALTH ACCENTS ========== */
+  .health-badge {
+    background: var(--health-green-light);
+    color: var(--health-green-dark);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  
+  .health-border {
+    border-left: 4px solid var(--health-green);
+    padding-left: 1rem;
+  }
+  
+  /* ========== CARDS ========== */
+  .restaurant-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .restaurant-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  /* ========== FOOTER ========== */
+  .footer {
+    background: var(--amazon-dark);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 4rem;
+  }
+  
+  .footer a {
+    color: var(--health-green-light);
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: var(--amazon-orange);
+  }
 
+  /* ========== UTILITY CLASSES ========== */
+  .text-health {
+    color: var(--health-green-dark) !important;
+  }
+  
+  .bg-health-light {
+    background: var(--health-green-light);
+  }
+  
+  .highlight-shadow {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
